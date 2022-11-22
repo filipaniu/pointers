@@ -4,9 +4,18 @@ int add(int *a, int *b) {
     return *a + *b;
 }
 
+int swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
 int main() {
     int f = 74;
     int e = 456;
+    swap(&f, &e);
+    printf("f = %i\n", f);
+    printf("e = %i\n", e);
     printf("adres f = %u\n", &f);
     printf("adres e = %u\n", &e);
     int *p = &f;
@@ -19,4 +28,3 @@ int main() {
     printf("suma = %i\n", g);
     return 0;
 }
-// Napisz funkcje ktora doda dwie liczby ktore sa do niej przekazane przez 2 wzkazniki
