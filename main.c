@@ -10,6 +10,12 @@ int swap(int *x, int *y) {
     *y = temp;
 }
 
+void zerosFill(int *data, int size) {
+    for (int i = 0; i < size; i++) {
+        data[i] = 0;
+    }
+}
+
 int main() {
     int f = 74;
     int e = 456;
@@ -26,5 +32,10 @@ int main() {
     printf("Wartosc e = %d\n", e);
     int g = add(&f, p);
     printf("suma = %i\n", g);
+    int arr[] = {432, 7, 34, 12, 76, 90, 54};
+    int size = sizeof arr / 4;
+    zerosFill(arr, size);
+    printf("first = %i\n", arr[0]);
+    printf("last = %i\n", arr[size - 1]);
     return 0;
 }
