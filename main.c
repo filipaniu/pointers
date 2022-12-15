@@ -26,6 +26,16 @@ void upperCase(char *text) {
     printf("\ntext = %s", text);
 }
 
+int stringLength(char *text) {
+    int i = 0;
+    while (text[i] != '\0') {
+        i++;
+    }
+    return i;
+}
+//napisz funkcje ktora zwroci dlugosc napisu(przyjętego jako parametr)
+
+
 int main() {
 //    int f = 74;
 //    int e = 456;
@@ -47,7 +57,9 @@ int main() {
 //    zerosFill(arr, size);
 //    printf("first = %i\n", arr[0]);
 //    printf("last = %i\n", arr[size - 1]);
-    char text[] = "Alamakota";
-    upperCase(text);
+//    char text[] = "Alamakota";
+//    upperCase(text);
+    int result = stringLength("Hello world");
+    printf("%i", result);
     return 0;
 }
