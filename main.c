@@ -35,6 +35,12 @@ int stringLength(char *text) {
 }
 //napisz funkcje ktora zwroci dlugosc napisu(przyjętego jako parametr)
 
+void sumArrays(int arr1[], int arr2[], int size) {
+    for (int i = 0; i < size; i++) {
+        int sum = arr1[i] + arr2[i];
+        printf("%i\n", sum);
+    }
+}
 
 int main() {
 //    int f = 74;
@@ -59,7 +65,11 @@ int main() {
 //    printf("last = %i\n", arr[size - 1]);
 //    char text[] = "Alamakota";
 //    upperCase(text);
-    int result = stringLength("Hello world");
-    printf("%i", result);
+//    int result = stringLength("Hello world");
+//    printf("%i", result);
+    int a1[] = {53, 85, 92, 41, 9};
+    int a2[] = {7, 5, 8, 9, 1};
+    int size = sizeof(a1) / sizeof(int);
+    sumArrays(a1, a2, size);
     return 0;
 }
